@@ -12,18 +12,15 @@ const Button = styled.button<ButtonComponentProps>`
   appearance: none;
   cursor: pointer;
 
-  /*
-  Remove default focus styles for mouse users ONLY if
-  :focus-visible is supported on this platform. 
-  */
+  /* Remove default focus styles for mouse users ONLY if :focus-visible is supported on this platform. */
   :focus:not(:focus-visible) {
     outline: none;
   }
 `;
 
 export type ButtonComponentProps = {
-  children?: HTMLCollection | string,
-  onClick: (e?: React.MouseEvent) => void
+  children?: HTMLCollection | string;
+  onClick: (e?: React.MouseEvent) => void;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 const ButtonComponent = ({ onClick, children, ...otherProps }: ButtonComponentProps) => {

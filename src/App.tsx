@@ -44,12 +44,7 @@ function App() {
         </Box>
         <Box>
           <p>Checkbox based on input tag with type checkbox:</p>
-          <Checkbox
-            checked={checkboxState}
-            onClick={handleCheckboxChange}
-          >
-            Check me!
-          </Checkbox>
+          <Checkbox checked={checkboxState} onChange={handleCheckboxChange}>Check me!</Checkbox>
         </Box>
       </Main>
     </ThemeProvider>

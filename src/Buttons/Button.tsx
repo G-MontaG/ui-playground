@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Button = styled.button<ButtonComponentProps>`
   padding: 5px 12px;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   background-color: ${({ theme }) => theme.color1};
   border: 0px;

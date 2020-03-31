@@ -35,10 +35,6 @@ const Label = styled.label<LabelComponentProps>`
     left: 3px;
     top: 4px;
   }
-
-  :focus:not(:focus-visible) {
-    outline: none;
-  }
 `;
 
 const HiddenInput = styled.input`
@@ -50,6 +46,15 @@ const HiddenInput = styled.input`
   padding: 0;
   position: absolute;
   width: 1px;
+
+  &[data-focus-visible-added]:focus + label::before {
+    outline: auto 2px Highlight; /* for non-webkit browsers */ 
+    outline: auto 5px -webkit-focus-ring-color;
+  } 
+
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 `;
 
 export type CheckboxComponentProps = {

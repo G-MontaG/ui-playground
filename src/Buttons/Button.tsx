@@ -11,6 +11,14 @@ const Button = styled.button<ButtonComponentProps>`
   border-radius: 3px;
   appearance: none;
   cursor: pointer;
+
+  /*
+  Remove default focus styles for mouse users ONLY if
+  :focus-visible is supported on this platform. 
+  */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
 `;
 
 export type ButtonComponentProps = {
